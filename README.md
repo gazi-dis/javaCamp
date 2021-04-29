@@ -1,2 +1,4 @@
-# javaCamp
-Only for camp homeworks
+# javaCamp Homework Archive
+### Only for camp homeworks
+- [x] 3.2
+
