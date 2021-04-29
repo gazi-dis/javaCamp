@@ -1,5 +1,4 @@
-# javaCamp Homework Archive
-### Only for camp homeworks
+# Java & React Camp Homework Archive
 #### Homeworks
 - [x] 3.2
 
