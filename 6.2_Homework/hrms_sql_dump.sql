@@ -5,7 +5,7 @@
 -- Dumped from database version 13.2
 -- Dumped by pg_dump version 13.2
 
--- Started on 2021-05-10 01:22:48
+-- Started on 2021-05-10 01:27:15
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -111,7 +111,7 @@ CREATE TABLE public."Users" (
 ALTER TABLE public."Users" OWNER TO postgres;
 
 --
--- TOC entry 2883 (class 2606 OID 16599)
+-- TOC entry 2885 (class 2606 OID 16599)
 -- Name: CompanyUsers CompanyUsers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -120,7 +120,7 @@ ALTER TABLE ONLY public."CompanyUsers"
 
 
 --
--- TOC entry 2887 (class 2606 OID 16621)
+-- TOC entry 2891 (class 2606 OID 16621)
 -- Name: Jobs Jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -129,7 +129,7 @@ ALTER TABLE ONLY public."Jobs"
 
 
 --
--- TOC entry 2881 (class 2606 OID 16590)
+-- TOC entry 2883 (class 2606 OID 16590)
 -- Name: Roles Roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -138,7 +138,7 @@ ALTER TABLE ONLY public."Roles"
 
 
 --
--- TOC entry 2885 (class 2606 OID 16607)
+-- TOC entry 2887 (class 2606 OID 16607)
 -- Name: SeekerUsers SeekerUsers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -147,7 +147,7 @@ ALTER TABLE ONLY public."SeekerUsers"
 
 
 --
--- TOC entry 2879 (class 2606 OID 16582)
+-- TOC entry 2881 (class 2606 OID 16582)
 -- Name: SystemUsers SystemUsers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -164,7 +164,34 @@ ALTER TABLE ONLY public."Users"
     ADD CONSTRAINT "Users_pkey" PRIMARY KEY (id);
 
 
--- Completed on 2021-05-10 01:22:48
+--
+-- TOC entry 2879 (class 2606 OID 16880)
+-- Name: Users email; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."Users"
+    ADD CONSTRAINT email UNIQUE (email);
+
+
+--
+-- TOC entry 2893 (class 2606 OID 16876)
+-- Name: Jobs name; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."Jobs"
+    ADD CONSTRAINT name UNIQUE (name);
+
+
+--
+-- TOC entry 2889 (class 2606 OID 16878)
+-- Name: SeekerUsers nationalityId; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."SeekerUsers"
+    ADD CONSTRAINT "nationalityId" UNIQUE ("nationalityId");
+
+
+-- Completed on 2021-05-10 01:27:16
 
 --
 -- PostgreSQL database dump complete
