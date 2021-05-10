@@ -1,0 +1,1 @@
+get all job rows -> localhost:8080/api/jobs/getAll
